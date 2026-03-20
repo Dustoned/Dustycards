@@ -78,7 +78,7 @@
     "data": "https://www.cardmarket.com/en/Pokemon/Products/Box-Sets/Mega-Charizard-X-ex-Ultra-Premium-Collection"
   },
   "https://www.cardmarket.com/en/Pokemon/Products/Box-Sets/Mega-Charizard-X-ex-Ultra-Premium-Collection|1|2": {
-    "ts": 1774042680495,
+    "ts": 1774046482606,
     "data": {
       "low": 170,
       "trend": 177.65,
@@ -88,7 +88,7 @@
     }
   },
   "https://www.cardmarket.com/en/Pokemon/Products/Box-Sets/Prismatic-Evolutions-Super-Premium-Collection|1|2": {
-    "ts": 1774042684047,
+    "ts": 1774046485610,
     "data": {
       "low": 255,
       "trend": 254.2,
@@ -98,7 +98,7 @@
     }
   },
   "https://www.cardmarket.com/en/Pokemon/Products/Singles/Black-Bolt/Seismitoad-V2-BLK105|1|2": {
-    "ts": 1774042676937,
+    "ts": 1774046479058,
     "data": {
       "low": 102.92,
       "trend": 109.6,
@@ -186,7 +186,7 @@
     }
   },
   "https://www.cardmarket.com/en/Pokemon/Products/Singles/Prismatic-Evolutions/Leafeon-ex-V2-PRE144|1|2": {
-    "ts": 1774042673580,
+    "ts": 1774046475491,
     "data": {
       "low": 190,
       "trend": 200.55,
@@ -224,5 +224,13 @@
       "avg30": 158.72,
       "avg1": 170.1
     }
+  },
+  "resolve|single|pikachu ex|ascended heroes": {
+    "ts": 1774046509597,
+    "data": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Ascended-Heroes/Pikachu-ex-V2-ASC276"
+  },
+  "resolve-product|6395|869888": {
+    "ts": 1774046509851,
+    "data": "https://www.cardmarket.com/en/Pokemon/Products/Singles/Ascended-Heroes/Pikachu-ex-V2-ASC276"
   }
 }

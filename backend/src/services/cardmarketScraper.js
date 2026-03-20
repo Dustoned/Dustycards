@@ -157,6 +157,14 @@ function normalizeSearchText(str) {
     .trim();
 }
 
+function cleanResolverName(value) {
+  return String(value || '')
+    .replace(/\s*\[.*?\]\s*/g, ' ')
+    .replace(/\s+\([^)]*\)\s*$/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function tokenize(str) {
   return normalizeSearchText(str)
     .split(' ')
@@ -166,9 +174,10 @@ function tokenize(str) {
 function scoreCandidate(candidate, name, setName, category) {
   const haystack = `${candidate.label} ${candidate.href}`;
   const normalizedHaystack = normalizeSearchText(haystack);
-  const normalizedName = normalizeSearchText(name);
+  const cleanedName = cleanResolverName(name);
+  const normalizedName = normalizeSearchText(cleanedName);
   const normalizedSet = normalizeSearchText(setName);
-  const nameTokens = tokenize(name);
+  const nameTokens = tokenize(cleanedName);
   const setTokens = tokenize(setName);
 
   let score = 0;
@@ -211,7 +220,8 @@ function unwrapDuckDuckGoUrl(href) {
 }
 
 async function resolveViaDuckDuckGo({ name, setName = '', category = 'single' }) {
-  const query = `site:cardmarket.com Pokemon ${name} ${setName}`.trim();
+  const cleanedName = cleanResolverName(name);
+  const query = `site:cardmarket.com Pokemon ${cleanedName} ${setName}`.trim();
   const url = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(query)}`;
   const response = await axios.get(url, {
     headers: {
@@ -256,10 +266,11 @@ async function configurePage(page) {
 }
 
 async function resolveProductUrl(browser, { name, setName = '', category = 'single' }) {
-  const cached = getResolvedProductUrl(name, setName, category);
+  const cleanedName = cleanResolverName(name);
+  const cached = getResolvedProductUrl(cleanedName, setName, category);
   if (cached !== null) return cached;
 
-  const query = [name, setName].filter(Boolean).join(' ').trim();
+  const query = [cleanedName, setName].filter(Boolean).join(' ').trim();
   if (!query) return null;
 
   const url = `https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=${encodeURIComponent(query)}`;
@@ -289,7 +300,7 @@ async function resolveProductUrl(browser, { name, setName = '', category = 'sing
     let bestScore = -Infinity;
 
     for (const candidate of candidates) {
-      const score = scoreCandidate(candidate, name, setName, category);
+      const score = scoreCandidate(candidate, cleanedName, setName, category);
       if (score > bestScore) {
         best = candidate;
         bestScore = score;
@@ -298,14 +309,14 @@ async function resolveProductUrl(browser, { name, setName = '', category = 'sing
 
     let resolved = bestScore > 0 ? normalizeProductUrl(best.href) : null;
     if (!resolved || resolved.includes('/Products/Search')) {
-      resolved = await resolveViaDuckDuckGo({ name, setName, category }).catch(() => null);
+      resolved = await resolveViaDuckDuckGo({ name: cleanedName, setName, category }).catch(() => null);
     }
-    setResolvedProductUrl(name, setName, category, resolved);
+    setResolvedProductUrl(cleanedName, setName, category, resolved);
     return resolved;
   } catch (err) {
-    console.warn(`[CM scraper] Resolve failed for "${name}": ${err.message}`);
-    const resolved = await resolveViaDuckDuckGo({ name, setName, category }).catch(() => null);
-    setResolvedProductUrl(name, setName, category, resolved);
+    console.warn(`[CM scraper] Resolve failed for "${cleanedName}": ${err.message}`);
+    const resolved = await resolveViaDuckDuckGo({ name: cleanedName, setName, category }).catch(() => null);
+    setResolvedProductUrl(cleanedName, setName, category, resolved);
     return resolved;
   } finally {
     await page.close().catch(() => {});

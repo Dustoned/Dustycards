@@ -9,6 +9,14 @@ const {
 
 const router = express.Router();
 
+function cleanResolverName(value) {
+  return String(value || '')
+    .replace(/\s*\[.*?\]\s*/g, ' ')
+    .replace(/\s+\([^)]*\)\s*$/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 router.get('/', (req, res, next) => {
   try {
     const { q = '' } = req.query;
@@ -50,17 +58,18 @@ router.get('/:id/products/:productId/open', async (req, res, next) => {
 
     const expansion = getLocalExpansion(id, { category: 'all' });
     const setName = expansion?.name || '';
+    const cleanName = cleanResolverName(product.name);
 
     let productUrl = getResolvedProductUrlByProduct(id, productId);
     if (!productUrl) {
-      productUrl = getResolvedProductUrl(product.name, setName, product.category);
+      productUrl = getResolvedProductUrl(cleanName, setName, product.category);
       if (productUrl) {
         setResolvedProductUrlByProduct(id, productId, productUrl);
       }
     }
     if (!productUrl) {
       productUrl = await resolveProductUrlNow({
-        name: product.name,
+        name: cleanName,
         setName,
         category: product.category,
       });
@@ -70,7 +79,7 @@ router.get('/:id/products/:productId/open', async (req, res, next) => {
     }
 
     if (!productUrl) {
-      const query = [product.name, setName].filter(Boolean).join(' ').trim();
+      const query = [cleanName, setName].filter(Boolean).join(' ').trim();
       const fallback = `https://www.cardmarket.com/en/Pokemon/Products/Search?searchString=${encodeURIComponent(query)}`;
       return res.redirect(302, fallback);
     }
