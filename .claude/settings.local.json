@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(node -e \":*)",
+      "Bash(npm run:*)",
+      "Bash(netstat -ano)",
+      "Read(//c/Users/Dustoned/Documents/DustyCards/**)",
+      "Bash(taskkill //F //PID 40132)",
+      "Bash(curl -s \"http://localhost:3001/api/cards/search?q=umbreon+ex\")",
+      "Bash(node -e \"const d=require\\(''''fs''''\\).readFileSync\\(''''/dev/stdin'''',''''utf8''''\\); const j=JSON.parse\\(d\\); console.log\\(''''Total:'''', j.total\\); if\\(j.results && j.results[0]\\) { const c=j.results[0]; console.log\\(JSON.stringify\\(c, null, 2\\)\\); }\")",
+      "Bash(curl -s \"http://localhost:3001/api/cards/search?q=umbreon+ex\" -o /tmp/search_result.json)",
+      "Bash(node -e \"const j=require\\(''''/tmp/search_result.json''''\\); console.log\\(''''Total:'''', j.total\\); const c=j.results && j.results[0]; if\\(c\\) console.log\\(JSON.stringify\\(c, null, 2\\)\\);\")",
+      "Bash(curl -s \"http://localhost:3001/api/cards/search?q=umbreon+ex\" -o \"C:/Users/Dustoned/AppData/Local/Temp/search_result.json\")",
+      "Bash(node -e \"const j=require\\(''C:/Users/Dustoned/AppData/Local/Temp/search_result.json''\\); console.log\\(''Total:'', j.total\\); const c=j.results && j.results[0]; if\\(c\\) { console.log\\(''CARD:'', JSON.stringify\\(c, null, 2\\)\\); } else { console.log\\(''RAW:'', JSON.stringify\\(j\\).slice\\(0,2000\\)\\); }\")",
+      "Bash(curl -s \"http://localhost:3001/api/cards/search?q=umbreon+ex\" -o \"C:/Users/Dustoned/AppData/Local/Temp/search2.json\")",
+      "Bash(node -e \"const j=require\\(''C:/Users/Dustoned/AppData/Local/Temp/search2.json''\\); const c=j.results&&j.results[0]; console.log\\(''Total:'', j.total\\); if\\(c\\) console.log\\(''name:'', c.name, ''| set:'', c.set_name, ''| price:'', c.pricing?.market, ''| img:'', c.image_url?.slice\\(0,60\\)\\);\")",
+      "Bash(curl -s \"http://localhost:3001/api/collection\" -o \"C:/Users/Dustoned/AppData/Local/Temp/col.json\")",
+      "Bash(node -e \"const j=require\\(''C:/Users/Dustoned/AppData/Local/Temp/col.json''\\); const i=j.items[0]; console.log\\(''name:'', i.name\\); console.log\\(''pricing:'', JSON.stringify\\(i.pricing\\)\\);\")",
+      "Bash(curl -s http://localhost:3001/api/collection)",
+      "Bash(node -e \"const d=require\\(''''fs''''\\).readFileSync\\(0,''''utf8''''\\); const j=JSON.parse\\(d\\); const keys=Object.keys\\(j.snapshots\\); console.log\\(''''Cards tracked:'''', keys.length\\); keys.forEach\\(k => console.log\\('''' -'''', k.slice\\(0,20\\)+''''...'''', j.snapshots[k]\\)\\);\")",
+      "WebFetch(domain:www.pokewallet.io)",
+      "Bash(curl -s -H \"X-API-Key: pk_test_1a93d1a7619aa3c326601ff6d683d651e77bc6b1f182b889\" \"https://api.pokewallet.io/cards/pk_bc4b6a05b1f2186ed2a171f8d746ec13785b40fc48f95c3856cb4e382ed90915e1fe6c1597b64200094f94f9b94c80af\")",
+      "Bash(python -m json.tool)",
+      "Bash(curl -s -H 'X-API-Key: pk_test_1a93d1a7619aa3c326601ff6d683d651e77bc6b1f182b889' https://api.pokewallet.io/cards/pk_bc4b6a05b1f2186ed2a171f8d746ec13785b40fc48f95c3856cb4e382ed90915e1fe6c1597b64200094f94f9b94c80af)",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Read(//c/Program Files \\(x86\\)/Google/Chrome/Application/**)"
+    ]
+  }
+}

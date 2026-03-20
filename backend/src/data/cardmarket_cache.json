@@ -1,0 +1,228 @@
+{
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Prismatic-Evolutions/Buddy-Buddy-Poffin-PRE101|1|2": {
+    "ts": 1774021626480,
+    "data": {
+      "low": 0.02,
+      "trend": 0.09,
+      "avg7": 0.1,
+      "avg30": 0.11,
+      "avg1": 0.07
+    }
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Prismatic-Evolutions/Umbreon-ex-V2-PRE161|1|2": {
+    "ts": 1774042691137,
+    "data": {
+      "low": 820,
+      "trend": 1168.67,
+      "avg7": 1373.99,
+      "avg30": 1078.34,
+      "avg1": 710
+    }
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Steam-Siege/Gardevoir-EX-STS116|1|2": {
+    "ts": 1774042687591,
+    "data": {
+      "low": 79.99,
+      "trend": 105.43,
+      "avg7": 96.56,
+      "avg30": 91.52,
+      "avg1": 52.5
+    }
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Steam-Siege/Gardevoir-EX-STS116|1|5": {
+    "ts": 1774022454417,
+    "data": {
+      "low": 50,
+      "trend": 105.43,
+      "avg7": 96.56,
+      "avg30": 91.52,
+      "avg1": 52.5
+    }
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Steam-Siege/Gardevoir-EX-STS116|1|6": {
+    "ts": 1774022680672,
+    "data": {
+      "low": 39.99,
+      "trend": 105.43,
+      "avg7": 96.56,
+      "avg30": 91.52,
+      "avg1": 52.5
+    }
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Steam-Siege/Gardevoir-EX-STS116|1|4": {
+    "ts": 1774024095710,
+    "data": {
+      "low": 50,
+      "trend": 105.43,
+      "avg7": 96.56,
+      "avg30": 91.52,
+      "avg1": 52.5
+    }
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Steam-Siege/Gardevoir-EX-STS116|1|1": {
+    "ts": 1774024399241,
+    "data": {
+      "low": 200,
+      "trend": 105.43,
+      "avg7": 96.56,
+      "avg30": 91.52,
+      "avg1": 52.5
+    }
+  },
+  "resolve|sealed|prismatic evolutions super-premium collection|sv: prismatic evolutions": {
+    "ts": 1774025379480,
+    "data": "https://www.cardmarket.com/en/Pokemon/Products/Box-Sets/Prismatic-Evolutions-Super-Premium-Collection"
+  },
+  "resolve|sealed|mega charizard x ex ultra premium collection|miscellaneous cards & products": {
+    "ts": 1774025385881,
+    "data": "https://www.cardmarket.com/en/Pokemon/Products/Box-Sets/Mega-Charizard-X-ex-Ultra-Premium-Collection"
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Box-Sets/Mega-Charizard-X-ex-Ultra-Premium-Collection|1|2": {
+    "ts": 1774042680495,
+    "data": {
+      "low": 170,
+      "trend": 177.65,
+      "avg7": 177.56,
+      "avg30": 174.83,
+      "avg1": 183.07
+    }
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Box-Sets/Prismatic-Evolutions-Super-Premium-Collection|1|2": {
+    "ts": 1774042684047,
+    "data": {
+      "low": 255,
+      "trend": 254.2,
+      "avg7": 243.28,
+      "avg30": 224.12,
+      "avg1": 207
+    }
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Black-Bolt/Seismitoad-V2-BLK105|1|2": {
+    "ts": 1774042676937,
+    "data": {
+      "low": 102.92,
+      "trend": 109.6,
+      "avg7": 107.26,
+      "avg30": 105.65,
+      "avg1": 114
+    }
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Ultra-Sun/Leafeon-GX-V3-sm5s073|1|2": {
+    "ts": 1774027155357,
+    "data": {
+      "low": 40,
+      "trend": 19.69,
+      "avg7": 26.45,
+      "avg30": 36.58,
+      "avg1": 35
+    }
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Ultra-Sun/Leafeon-GX-V2-sm5s067|1|2": {
+    "ts": 1774027155520,
+    "data": {
+      "low": 8.49,
+      "trend": 11.69,
+      "avg7": 15.79,
+      "avg30": 14.28,
+      "avg1": 19.8
+    }
+  },
+  "resolve|sealed|prismatic evolutions mini tin [leafeon]|sv: prismatic evolutions": {
+    "ts": 1774027156431,
+    "data": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Prismatic-Evolutions-Leafeon-Mini-Tin"
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Crimson-Haze/Leafeon-sv5a006|1|2": {
+    "ts": 1774027156465,
+    "data": {
+      "low": 0.02,
+      "trend": 0.08,
+      "avg7": 0.05,
+      "avg30": 0.08,
+      "avg1": 0.06
+    }
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Sky-Splitting-Charisma/Nuzleaf|1|2": {
+    "ts": 1774027156520,
+    "data": {
+      "low": 0.08,
+      "trend": 0.11,
+      "avg7": 0.11,
+      "avg30": 0.12,
+      "avg1": 0.2
+    }
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/GX-Ultra-Shiny/Leafeon-GX-sm8b206|1|2": {
+    "ts": 1774027156536,
+    "data": {
+      "low": 16.99,
+      "trend": 41.78,
+      "avg7": 32.73,
+      "avg30": 27.98,
+      "avg1": 11
+    }
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Cyber-Judge/Nuzleaf-sv5M004|1|2": {
+    "ts": 1774027157140,
+    "data": {
+      "low": 0.02,
+      "trend": 0.03,
+      "avg7": 0.03,
+      "avg30": 0.03,
+      "avg1": 0.03
+    }
+  },
+  "resolve|sealed|prismatic evolutions tech sticker collection [leafeon]|sv: prismatic evolutions": {
+    "ts": 1774027157231,
+    "data": "https://www.cardmarket.com/en/Pokemon/Products/Blisters/Prismatic-Evolutions-Sylveon-Tech-Sticker-Collection"
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Terastal-Festival-ex/Leafeon-sv8a002|1|2": {
+    "ts": 1774027157592,
+    "data": {
+      "low": 0.02,
+      "trend": 0.47,
+      "avg7": 0.07,
+      "avg30": 0.59,
+      "avg1": 0.05
+    }
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Singles/Prismatic-Evolutions/Leafeon-ex-V2-PRE144|1|2": {
+    "ts": 1774042673580,
+    "data": {
+      "low": 190,
+      "trend": 200.55,
+      "avg7": 202.1,
+      "avg30": 209.81,
+      "avg1": 160
+    }
+  },
+  "resolve|single|mega gengar ex [shadowy concealment | void gale]|ascended heroes": {
+    "ts": 1774044690053,
+    "data": null
+  },
+  "resolve|single|pikachu ex [thunderbolt]|ascended heroes": {
+    "ts": 1774037895097,
+    "data": "https://www.cardmarket.com/en/Pokemon/Cards/Pikachu-ex-Thunderbolt/Versions"
+  },
+  "resolve|single|mega charizard x ex [inferno x]|inferno x": {
+    "ts": 1774038724002,
+    "data": "https://www.cardmarket.com/en/Pokemon/Cards/Mega-Charizard-X-ex-Inferno-X"
+  },
+  "resolve-product|6291|850618": {
+    "ts": 1774038724354,
+    "data": "https://www.cardmarket.com/en/Pokemon/Cards/Mega-Charizard-X-ex-Inferno-X"
+  },
+  "resolve|sealed|prismatic evolutions lucario ex & tyranitar ex premium collection (sam's club)|miscellaneous cards & products": {
+    "ts": 1774044080402,
+    "data": "https://www.cardmarket.com/en/Pokemon/Products/Box-Sets/Prismatic-Evolutions-Lucario-ex-Tyranitar-ex-Premium-Collection"
+  },
+  "https://www.cardmarket.com/en/Pokemon/Products/Box-Sets/Prismatic-Evolutions-Lucario-ex-Tyranitar-ex-Premium-Collection|1|2": {
+    "ts": 1774044086874,
+    "data": {
+      "low": 179.95,
+      "trend": 168.86,
+      "avg7": 169.38,
+      "avg30": 158.72,
+      "avg1": 170.1
+    }
+  }
+}
