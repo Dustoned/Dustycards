@@ -7,7 +7,9 @@
  * - collection loads read from cache first for fast responses
  */
 
-const puppeteer = require('puppeteer-core');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+puppeteer.use(StealthPlugin());
 const axios = require('axios').default;
 const cheerio = require('cheerio');
 const fs = require('fs');
@@ -256,12 +258,6 @@ async function resolveViaDuckDuckGo({ name, setName = '', category = 'single' })
 }
 
 async function configurePage(page) {
-  await page.evaluateOnNewDocument(() => {
-    Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-  });
-  await page.setUserAgent(
-    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
-  );
   await page.setExtraHTTPHeaders({ 'Accept-Language': 'en-US,en;q=0.9' });
 }
 
@@ -396,7 +392,7 @@ async function runBackgroundScrape(targets) {
   try {
     browser = await puppeteer.launch({
       executablePath: CHROME_PATH,
-      headless: true,
+      headless: 'new',
       args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
     });
 
@@ -454,7 +450,7 @@ async function scrapeAndCacheNow(productUrl, language = 'EN', condition = 'Near 
   try {
     browser = await puppeteer.launch({
       executablePath: CHROME_PATH,
-      headless: true,
+      headless: 'new',
       args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
     });
 
@@ -481,7 +477,7 @@ async function resolveProductUrlNow(target) {
   try {
     browser = await puppeteer.launch({
       executablePath: CHROME_PATH,
-      headless: true,
+      headless: 'new',
       args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
     });
     return await resolveProductUrl(browser, target);

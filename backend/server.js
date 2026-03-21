@@ -12,6 +12,8 @@ const collectionRouter = require('./src/routes/collection');
 const settingsRouter = require('./src/routes/settings');
 const { errorHandler } = require('./src/middleware/errorHandler');
 const { requestLogger } = require('./src/middleware/logger');
+const { refreshIfNeeded, startPeriodicRefresh, setOnRefreshComplete } = require('./src/services/cardmarketDataRefresh');
+const { invalidateCache: invalidateCmCache } = require('./src/services/cardmarketLocalData');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -64,12 +66,21 @@ app.use((req, res) => {
 // Error handler (must be last)
 app.use(errorHandler);
 
+// Wire up CardMarket data refresh → invalidate in-memory cache after download
+setOnRefreshComplete(() => invalidateCmCache());
+
 const server = app.listen(PORT, () => {
   console.log(`DustyCards backend running on http://localhost:${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
   if (!process.env.POKEWALLET_API_KEY) {
     console.warn('WARNING: POKEWALLET_API_KEY is not set. API calls will fail.');
   }
+
+  // Auto-refresh CardMarket price guide data on startup (non-blocking)
+  refreshIfNeeded().catch((err) => {
+    console.warn('[CM data] Startup refresh failed:', err.message);
+  });
+  startPeriodicRefresh();
 });
 
 server.on('error', (err) => {

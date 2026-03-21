@@ -10,7 +10,7 @@ import { useSettings } from './useSettings.js';
  */
 export function useDisplayPrice() {
   const { settings } = useSettings();
-  const priceType = settings.priceType || 'market';
+  const priceType = settings.priceType || 'trend';
 
   return (pricing) => {
     if (!pricing) return null;

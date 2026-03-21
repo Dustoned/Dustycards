@@ -79,7 +79,7 @@ function sanitizeCardmarketPricing(pricing, { keepMarket = true } = {}) {
   return {
     ...pricing,
     market: keepMarket ? pricing.market ?? null : null,
-    low: null,
+    low: pricing.low ?? null,
     mid: null,
     high: null,
   };
@@ -166,7 +166,7 @@ async function fetchLivePricing(item, priceSource = 'tcgplayer', preferFreshScra
       if (productUrl && !item.cardmarket_url) {
         persistCardmarketUrl(item.id, productUrl);
       }
-      const localGuideMatch = findLocalCardmarketPricing(item, normalized);
+      const localGuideMatch = findLocalCardmarketPricing(item, normalized, productUrl);
       const basePricing = isSealed
         ? (localGuideMatch?.pricing || emptyCardmarketPricing())
         : sanitizeCardmarketPricing(localGuideMatch?.pricing || normalized.pricing);

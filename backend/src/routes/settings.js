@@ -2,13 +2,15 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 
+const { refreshAll, getStatus: getCmDataStatus } = require('../services/cardmarketDataRefresh');
+
 const router = express.Router();
 
 const DATA_PATH = path.join(__dirname, '../data/settings.json');
 
 const DEFAULT_SETTINGS = {
   priceSource: 'cardmarket',  // 'tcgplayer' | 'cardmarket'
-  priceType: 'low',           // 'market' | 'low' | 'mid' | 'trend'
+  priceType: 'trend',          // 'market' | 'low' | 'mid' | 'trend'
   currency: 'EUR',            // 'USD' | 'EUR' | 'GBP'
   cardSize: 'xl',             // 'sm' | 'md' | 'lg' | 'xl'
   theme: 'dark',              // 'dark' (only dark is supported right now)
@@ -115,6 +117,27 @@ router.patch('/', (req, res, next) => {
 
     writeSettings(updated);
     res.json(updated);
+  } catch (err) {
+    next(err);
+  }
+});
+
+/**
+ * GET /api/settings/cm-data
+ * Status of CardMarket local data files (price guide, products).
+ */
+router.get('/cm-data', (req, res) => {
+  res.json(getCmDataStatus());
+});
+
+/**
+ * POST /api/settings/cm-data/refresh
+ * Trigger a manual refresh of CardMarket data files from S3.
+ */
+router.post('/cm-data/refresh', async (req, res, next) => {
+  try {
+    const result = await refreshAll();
+    res.json(result);
   } catch (err) {
     next(err);
   }

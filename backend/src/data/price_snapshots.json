@@ -1,116 +1,38 @@
 {
   "snapshots": {
-    "pk_bc4b6a05b1f2186ed2a171f8d746ec13785b40fc48f95c3856cb4e382ed90915e1fe6c1597b64200094f94f9b94c80af": [
+    "pk_fae06290a6fc31d1879036650cea3ff8f72c7380271c9de0fef50ae3f93924c1436dcd33c921826f1c4234b3d5": [
       {
-        "date": "2026-03-19",
-        "market": 1230.74,
-        "low": 959.99,
-        "mid": 1499.99,
-        "trend": null,
-        "avg7": null,
-        "avg30": null,
-        "source": "tcgplayer"
-      },
-      {
-        "date": "2026-03-20",
-        "market": 1228.07,
-        "low": 820,
+        "date": "2026-03-21",
+        "market": 71.73,
+        "low": 9,
         "mid": null,
-        "trend": 1228.07,
-        "avg7": 1311.58,
-        "avg30": 1081.31,
+        "trend": 71.73,
+        "avg7": 92.21,
+        "avg30": 55.69,
         "source": "cardmarket"
       }
     ],
-    "pk_6518410d32068f6b8b91786d2f0ee2abc3a969e4a0d41a8af5a1022be99c03a23d4c531d16740c56c5ac71ac6fbda6": [
+    "pk_f4c4bf320c8a84476453c810d80900062a6e46a50ff2e38bc480d6723d954190205de20067cd7e8f874e89ea8a": [
       {
-        "date": "2026-03-19",
-        "market": 82.72,
-        "low": 56,
-        "mid": 87.72,
-        "trend": null,
-        "avg7": null,
-        "avg30": null,
-        "source": "tcgplayer"
-      },
-      {
-        "date": "2026-03-20",
-        "market": 82.72,
-        "low": 56,
-        "mid": 87.72,
-        "trend": null,
-        "avg7": null,
-        "avg30": null,
-        "source": "tcgplayer"
-      }
-    ],
-    "pk_c72b22b18616734d3661febac550feefd652aa8b7c162176d68cf98534cab0c63b3d953f7b16bc120b66": [
-      {
-        "date": "2026-03-19",
-        "market": 0.11,
-        "low": 0.02,
+        "date": "2026-03-21",
+        "market": 71.73,
+        "low": 9,
         "mid": null,
-        "trend": 0.1,
-        "avg7": 0.12,
-        "avg30": 0.12,
-        "source": "cardmarket"
-      },
-      {
-        "date": "2026-03-20",
-        "market": 0.1,
-        "low": 0.02,
-        "mid": null,
-        "trend": 0.1,
-        "avg7": 0.11,
-        "avg30": 0.12,
+        "trend": 71.73,
+        "avg7": 92.21,
+        "avg30": 55.69,
         "source": "cardmarket"
       }
     ],
-    "pk_ae241febc3a034356a63ecbc347030cb43f7a218d780433f1872478e12e846ae872f6e20f7ed364fca": [
+    "pk_2974b3d1ee51610dfce99ba9ddb2ac15c99c0ac6c64ef138192cf55ce8b98bf2c711fdabaa57c859e32448cda9": [
       {
-        "date": "2026-03-20",
-        "market": 177.65,
-        "low": 170,
+        "date": "2026-03-21",
+        "market": 10.05,
+        "low": 25,
         "mid": null,
-        "trend": 177.65,
-        "avg7": 177.56,
-        "avg30": 174.83,
-        "source": "cardmarket"
-      }
-    ],
-    "pk_914b8c7ac932bf77e3eb50bb7f6d09aa6badd82497a045b12ad270632cdb298e984756f80cfaab4d0f7d8273e1113099": [
-      {
-        "date": "2026-03-20",
-        "market": 109.6,
-        "low": 109,
-        "mid": null,
-        "trend": 109.6,
-        "avg7": 107.26,
-        "avg30": 105.65,
-        "source": "cardmarket"
-      }
-    ],
-    "pk_e4e6a62ecfe6678b627b25c10ee0a2f3be712a28faade0fbacfc9c2e75b5945a219a21b3d32db3f8b5fb7f671e2711cb": [
-      {
-        "date": "2026-03-20",
-        "market": 200.55,
-        "low": 119.99,
-        "mid": null,
-        "trend": 200.55,
-        "avg7": 202.1,
-        "avg30": 209.81,
-        "source": "cardmarket"
-      }
-    ],
-    "pk_cf456bfef15e76ee6099de745aadd162311c2c6c9760c5704737641df204db66c215dece7068031ac9": [
-      {
-        "date": "2026-03-20",
-        "market": 168.86,
-        "low": 179.95,
-        "mid": null,
-        "trend": 168.86,
-        "avg7": 169.38,
-        "avg30": 158.72,
+        "trend": 10.05,
+        "avg7": 7.15,
+        "avg30": 10.12,
         "source": "cardmarket"
       }
     ]
